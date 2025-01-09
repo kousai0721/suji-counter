@@ -2,7 +2,7 @@
   "name": "suji-counter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/kousai0721/suji-counter.git",
+  "homepage": "https://kousai0721.github.io/suji-counter",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",

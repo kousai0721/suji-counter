@@ -87,3 +87,17 @@ h2 {
 .reset-button:hover {
   background-color: #d32f2f;
 }
+
+.title-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 横方向の中央揃え */
+  gap: 10px; /* 画像と文字の間隔 */
+  margin-bottom: 10px; /* タイトル下の余白 */
+}
+
+.group-icon {
+  width: 24px;
+  height: 24px;
+}
+

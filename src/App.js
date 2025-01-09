@@ -1,11 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
+import manzuImage from "./assets/manzu.png";
+import pinzuImage from "./assets/pinzu.png";
+import sozuImage from "./assets/sozu.png";
 
 const SujiCounter = () => {
   const sujiGroups = [
-    { type: "萬子", values: ["1-4", "2-5", "3-6", "4-7", "5-8", "6-9"] },
-    { type: "ピンズ", values: ["1-4", "2-5", "3-6", "4-7", "5-8", "6-9"] },
-    { type: "索子", values: ["1-4", "2-5", "3-6", "4-7", "5-8", "6-9"] },
+    {
+      type: "萬子",
+      values: ["1-4", "2-5", "3-6", "4-7", "5-8", "6-9"],
+      image: manzuImage,
+    },
+    {
+      type: "筒子",
+      values: ["1-4", "2-5", "3-6", "4-7", "5-8", "6-9"],
+      image: pinzuImage,
+    },
+    {
+      type: "索子",
+      values: ["1-4", "2-5", "3-6", "4-7", "5-8", "6-9"],
+      image: sozuImage,
+    },
   ];
 
   const totalSuji = sujiGroups.reduce(
@@ -14,7 +29,7 @@ const SujiCounter = () => {
   ); // 全筋の数（18本）
   const [selectedSuji, setSelectedSuji] = useState({
     萬子: [],
-    ピンズ: [],
+    筒子: [],
     索子: [],
   });
   const [isCenterActive, setIsCenterActive] = useState(false); // 真ん中ボタンの状態
@@ -40,7 +55,7 @@ const SujiCounter = () => {
   const resetSuji = () => {
     setSelectedSuji({
       萬子: [],
-      ピンズ: [],
+      筒子: [],
       索子: [],
     });
     setIsCenterActive(false); // 真ん中ボタンもリセット
@@ -68,7 +83,10 @@ const SujiCounter = () => {
       </button>
       {sujiGroups.map((group, index) => (
         <div key={index} className="group">
-          <h2>{group.type}</h2>
+          <h2 className="title-with-image">
+            <img src={group.image} alt={group.type} className="group-icon" />
+            {group.type}
+          </h2>
           <div className="button-grid">
             {group.values.map((suji, idx) => (
               <button
@@ -84,13 +102,6 @@ const SujiCounter = () => {
           </div>
         </div>
       ))}
-      <div className="guidelines">
-        <p>
-          愚形2000点テンパイでリーチを受けたら 10% まで押す。 15% で降りる。
-        </p>
-        <p>良形2000点テンパイなら 25% まで押す。</p>
-        <p>5800点以上なら愚形でも地獄の底まで。</p>
-      </div>
     </div>
   );
 };

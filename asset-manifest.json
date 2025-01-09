@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/kousai0721/suji-counter.git/static/css/main.f6d7a88f.css",
-    "main.js": "/kousai0721/suji-counter.git/static/js/main.f2d9feca.js",
-    "index.html": "/kousai0721/suji-counter.git/index.html",
-    "main.f6d7a88f.css.map": "/kousai0721/suji-counter.git/static/css/main.f6d7a88f.css.map",
-    "main.f2d9feca.js.map": "/kousai0721/suji-counter.git/static/js/main.f2d9feca.js.map"
+    "main.css": "/suji-counter/static/css/main.f6d7a88f.css",
+    "main.js": "/suji-counter/static/js/main.f2d9feca.js",
+    "index.html": "/suji-counter/index.html",
+    "main.f6d7a88f.css.map": "/suji-counter/static/css/main.f6d7a88f.css.map",
+    "main.f2d9feca.js.map": "/suji-counter/static/js/main.f2d9feca.js.map"
   },
   "entrypoints": [
     "static/css/main.f6d7a88f.css",

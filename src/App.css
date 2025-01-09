@@ -101,3 +101,27 @@ h2 {
   height: 24px;
 }
 
+/* 萬子のボタン */
+.manzu-button {
+  background-color: #ffe6e6; /* 薄い赤色 */
+  border: 1px solid #ffcccc;
+}
+
+/* 筒子のボタン */
+.pinzu-button {
+  background-color: #e6f2ff; /* 薄い青色 */
+  border: 1px solid #b3d9ff;
+}
+
+/* 索子のボタン */
+.sozu-button {
+  background-color: #e6ffe6; /* 薄い緑色 */
+  border: 1px solid #ccffcc;
+}
+
+/* 押したときの色を一律グレー */
+.suji-button.selected {
+  background-color: gray;
+  color: white;
+  border: 1px solid #888;
+}

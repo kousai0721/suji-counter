@@ -88,17 +88,28 @@ const SujiCounter = () => {
             {group.type}
           </h2>
           <div className="button-grid">
-            {group.values.map((suji, idx) => (
-              <button
-                key={idx}
-                className={`suji-button ${
-                  selectedSuji[group.type].includes(suji) ? "selected" : ""
-                }`}
-                onClick={() => toggleSuji(group.type, suji)}
-              >
-                {suji}
-              </button>
-            ))}
+            {group.values.map((suji, idx) => {
+              // グループごとにクラスを設定
+              const buttonClass =
+                group.type === "萬子"
+                  ? "manzu-button"
+                  : group.type === "筒子"
+                  ? "pinzu-button"
+                  : group.type === "索子"
+                  ? "sozu-button"
+                  : "";
+              return (
+                <button
+                  key={idx}
+                  className={`suji-button ${buttonClass} ${
+                    selectedSuji[group.type].includes(suji) ? "selected" : ""
+                  }`}
+                  onClick={() => toggleSuji(group.type, suji)}
+                >
+                  {suji}
+                </button>
+              );
+            })}
           </div>
         </div>
       ))}
